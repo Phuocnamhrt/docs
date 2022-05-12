@@ -23,3 +23,10 @@ For more information, see  "[Introduction to GraphQL](/graphql/guides/introducti
 {% for item in graphql.schemaForCurrentVersion.scalars %}
   {% include graphql-scalar %}
 {% endfor %}
+{% example %}
+enumValues(includeDeprecated: Boolean = false): [__EnumValue!]
+
+{  booleanArgField(booleanArg: true) }
+{  booleanArgField  }
+barkVolumeFragment on Dog 
+{  barkVolume...nameFragment  }
